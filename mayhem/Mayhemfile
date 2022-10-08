@@ -1,0 +1,9 @@
+project: pubmed_parser
+target: parse-fuzz
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_parse.py
+    libfuzzer: true
+    max_length: 60800
