@@ -1,9 +1,8 @@
-project: pubmed_parser
-target: parse-fuzz
+project: jsonlines
+target: rw-fuzz
 testsuite:
     - file://mayhem/testsuite
 
 cmds:
-  - cmd: /src/mayhem/fuzz_parse.py
+  - cmd: /src/mayhem/fuzz_rw.py
     libfuzzer: true
-    max_length: 60800
